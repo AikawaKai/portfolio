@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it" class="no-js">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-social.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.4.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="Chart.min.js"></script>
+
+
+    <script>
+    $(document).ready(function() {
+      $('dropdown-toggle').dropdown()
+    });
+    </script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    
+    <div class="row">
+      <nav class="navbar navbar-default ">
+        <div class="col-sm-12 text-center">
+          <h3>Marco Odore</h3>
+          <h4>Portfolio</h4>
+        </div>
+
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="sidebar-nav">
+          <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="visible-xs navbar-brand">Sidebar menu</span>
+            </div>
+            <div class="navbar-collapse collapse sidebar-navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Biografia</a></li>
+                <li><a href="#">Educazione</a></li>
+                <li><a href="#">Lavori</a></li>
+                <li><a href="#">Thesis</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><div style="padding-left:15px" ><a id="twitter" class="btn btn-social-icon btn-twitter">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/pub/marco-odore/103/64b/870" id="linkedin" class="btn btn-social-icon btn-linkedin">
+                    <i class="fa fa-linkedin"></i>
+                  </a></div></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+      
+      <div id="wrapper">
+       <div id="bio" class="col-sm-9">
+         <img class="me" src="img/me.jpg" align="left">Biografia <br/>bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla </img>
+       </div>
+       <div id="edu" class="col-sm-9">
+         &nbsp;Educazione
+       </div>
+       <div id="lav" class="col-sm-9">
+         &nbsp;Lavori
+       </div>
+       <div id="tesi" class="col-sm-9">
+         &nbsp;Thesis
+       </div>
+       <div id="skill" class="col-sm-9">
+        <div class="row">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skill
+       </div>
+       <div class="row">
+        <canvas id="countries" width="300" height="200"></canvas>
+        <script>
+        var data = {
+         labels: ["Penis", "Bajingoh", "Boobs", "tortillas", "Coding", "cacconing", "Running"],
+         datasets: [
+        {
+          label: "My Second dataset",
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(151,187,205,1)",
+          data: [100, 90, 80, 19, 96, 70, 100]
+        }
+        ]
+      };
+      
+
+            // Get the context of the canvas element we want to select
+            var countries= document.getElementById("countries").getContext("2d");
+            new Chart(countries).Radar(data);
+            </script>
+          </div>
+        </div>
+        
+     </div>
+    </div>
+    
+  </body>
+  <script src="script.js"></script>
+  <script src="info.js"></script>
+  
+
+
+
+  
+
+
+  </html>
