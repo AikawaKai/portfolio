@@ -6,13 +6,12 @@
     height: auto;
     border: 1px solid black;
  	border-radius: 5px; 
- 	margin-right: 3px;
+ 	margin-right: 7px;
  }
 
- .twitter { 
- 	margin-left: 10px;
- }
+.icons{
 
-  .linkedin {
- 	margin-left: 3px;
- }
+}
+
+.btn{
+}
