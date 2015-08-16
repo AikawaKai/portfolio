@@ -8,13 +8,33 @@
  	border-radius: 5px; 
  	margin-right: 7px;
  }
+.ml {
+    display: block;
 
+    max-height:120px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+ 	border-radius: 5px; 
+ 	margin-right: 7px;
+ }
+
+ .mlp {
+    display: block;
+
+    max-height:120px;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+ 	border-radius: 5px; 
+ 	margin-left: 7px;
+ }
 .icons{
 
 }
 
 .btn{
 }
-.table, th, td {
+table, th, td {
     border: 1px solid black;
 }
