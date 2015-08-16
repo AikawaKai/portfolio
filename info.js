@@ -1,5 +1,5 @@
  var data = {
-         labels: ["Penis", "Bajingoh", "new", "tortillas", "Coding", "cacconing", "Running"],
+         labels: ["Java", "C", "PostgreSQL", "Script di Shell", "HTML", "JavaScript", "CSS","Git", "F#"],
          datasets: [
         {
           label: "My Second dataset",
@@ -9,7 +9,7 @@
           pointStrokeColor: "#fff",
           pointHighlightFill: "#fff",
           pointHighlightStroke: "rgba(151,187,205,1)",
-          data: [100, 90, 80, 19, 96, 70, 100]
+          data: [95, 80, 75, 75, 75, 50, 50, 70, 60]
         }
         ]
       };
