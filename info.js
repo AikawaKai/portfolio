@@ -1,3 +1,20 @@
+ var data = {
+         labels: ["Penis", "Bajingoh", "new", "tortillas", "Coding", "cacconing", "Running"],
+         datasets: [
+        {
+          label: "My Second dataset",
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(151,187,205,1)",
+          data: [100, 90, 80, 19, 96, 70, 100]
+        }
+        ]
+      };
+
+
 $('#edu, #lav, #tesi, #skill').hide();
 // $(".nav li").each(function(i) {
 //     $(this).click(function() {
@@ -30,4 +47,9 @@ $(document).on("ready", function(e){
  */
 $(".nav li a").on("click", function(e){
 	$("#wrapper").find($(this).attr('href')).show().siblings().hide();
+	if($(this).attr('href') == '#skill')
+	{
+		var info= document.getElementById("infos").getContext("2d");
+        new Chart(info).Radar(data);
+	}
 })
