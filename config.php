@@ -1,6 +1,5 @@
-<?php//generali
- 
-$sito_internet = "Targetweb";
+<?php
+$sito_internet = "marcoodore.ddns.net";
  
 $data =(date("d-m-y"));
  
@@ -18,5 +17,5 @@ $db_user = "postgres";
  
 $db_psw = "postgres";
  
-$db_name = "target";
+$db_name = "thepulisher";
 ?>

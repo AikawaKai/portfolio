@@ -3,10 +3,10 @@
 <html>
 <head>
  
-    <title>Collegati per amministrare il sito - <?php echo $sito_internet ?></title>
+    <title>Collegati per amministrare il sito - <?php echo $sito_internet ?> </title>
  
     <!--Pannello di gestione creato da Mel Riccardo-->
-    <link href="css/admin.css" rel="stylesheet" type="text/css" />
+    <link href="loginstyle.css" rel="stylesheet" type="text/css" />
  
 </head>
 <body>
@@ -18,7 +18,7 @@
         </fieldset>
         <fieldset id="actions">
             <input type="submit" id="submit" value="Collegati">
-            <a href="../index.php" id="back">Ritorna al sito</a>
+            <a href="index.html" id="back">Ritorna al sito</a>
         </fieldset>
     </form>
  
