@@ -1,0 +1,101 @@
+package routines;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Date;
+import java.util.Calendar;
+
+
+public class GeneraTask {
+	
+	public static void main(String[] args){
+		
+		BufferedReader br = null;
+		int sCurrentLine = -1;
+
+		try {
+			
+			br = new BufferedReader(new FileReader("lastid.txt"));
+			sCurrentLine = Integer.valueOf(br.readline());
+			System.out.println(sCurrentLine);
+			
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if (br != null)br.close();
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+			}
+		
+		Connection con = null;
+		Statement st = null;
+		PreparedStatement statement;
+		ResultSet rs = null;
+		String url = "jdbc:postgresql://localhost/thepulisher";
+		String user = "postgres";
+		String password = "postgres";
+		String query = "INSERT INTO task VALUES(?,?,?,?)";
+		int last_task = Integer.valueOf(args[0]); 
+		int last_id = sCurrentLine;
+		Date current_date = new Date(Calendar.getInstance().getTime().getTime());
+		
+		try{
+			con = DriverManager.getConnection(url, user, password);
+			statement = con.prepareStatement(query);
+			statement.setInt(1, last_task);
+			statement.setInt(2,last_id);
+			statement.setString(3,"task");
+			statement.setDate(4, current_date);
+			statement.executeUpdate();
+		}catch(SQLException ex){
+			ex.printStackTrace();
+		} finally {
+			try{
+				
+				if(rs != null){
+					rs.close();
+				}
+				if(st != null){
+					st.close();
+				}
+				if(con != null){
+					con.close();
+				}
+				
+			}catch (SQLException e){
+				e.printStackTrace();
+			}
+		}
+		PrintWriter writer;
+		try {
+			writer = new PrintWriter("lastid.txt", "UTF-8");
+			writer.println(last_id++);
+			writer.close();
+			writer = new PrintWriter("lasttask.txt", "UTF-8");
+			writer.println(last_id++);
+			writer.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	
+	}
+	
+}

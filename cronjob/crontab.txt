@@ -1,0 +1,2 @@
+MAILTO=marco.odore@gmail.com 1 * * * * ./ls -la > dati.txt
+

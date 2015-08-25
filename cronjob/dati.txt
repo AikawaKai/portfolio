@@ -1,0 +1,6 @@
+total 12
+drwxrwxr-x 2 kai kai 4096 ago 25 14:23 .
+drwxrwxr-x 7 kai kai 4096 ago 25 14:12 ..
+-rw-rw-r-- 1 kai kai   60 ago 25 14:14 crontab.txt
+-rw-rw-r-- 1 kai kai    0 ago 25 14:12 crontab.txt~
+-rw-rw-r-- 1 kai kai    0 ago 25 14:24 dati.txt

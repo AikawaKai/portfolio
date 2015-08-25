@@ -1,0 +1,11 @@
+package routines;
+
+public class GeneraTask {
+	
+	public static void main(String[] args){
+		
+		
+		
+	}
+	
+}

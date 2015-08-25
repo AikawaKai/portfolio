@@ -1,0 +1,1 @@
+* * * * * /home/kai/Documenti/workspace_Portfolio/repogit/cronjob/java -jar GenerateTask.jar

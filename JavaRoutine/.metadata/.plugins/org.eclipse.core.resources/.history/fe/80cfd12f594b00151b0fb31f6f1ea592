@@ -1,0 +1,38 @@
+package Comunicazione;
+
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.activation.*;
+
+public class Sender
+{
+   public static void main(String [] args)
+   {    
+	// Creazione di una mail session
+	   String dest="marco.odore@gmail.com";
+	   String mitt="marco.odore@gmail.com";
+	   String oggetto="prova";
+	   String testoEmail="prova prova";
+	    Properties props = new Properties();
+	    props.put("smtp.gmail.com", "smtp.gmail.com");
+	    Session session = Session.getDefaultInstance(props);
+
+	    try{
+		    MimeMessage message = new MimeMessage(session);
+		    message.setSubject(oggetto);
+		    message.setText(testoEmail);
+	
+		    // Aggiunta degli indirizzi del mittente e del destinatario
+		    InternetAddress fromAddress = new InternetAddress(mitt);
+		    InternetAddress toAddress = new InternetAddress(dest);
+		    message.setFrom(fromAddress);
+		    message.setRecipient(Message.RecipientType.TO, toAddress);
+	
+		    // Invio del messaggio
+		    Transport.send(message);
+	    }catch(Exception e){
+	    	e.printStackTrace();
+	    }
+   }
+}
